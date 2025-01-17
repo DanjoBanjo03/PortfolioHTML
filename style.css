@@ -81,13 +81,15 @@ span{
     align-items: center;
     gap: 2em; 
     padding: 30px 12%;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding-top: 120px;
 }
 
 @media (max-width: 768px) {
     .home {
         padding: 20px 8%;
-        gap: 1.5em; 
+        gap: 1.5em;
+        padding-top: 100px;
     }
 
     .home-content {
@@ -104,6 +106,7 @@ span{
         flex-direction: column;
         gap: 1em; 
         padding: 20px 5%;
+        padding-top: 90px;
     }
 
     .home-content h3 {
