@@ -1,0 +1,180 @@
+/* Existing styles remain unchanged */
+
+/* New styles for mobile menu */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+
+    .navbar a {
+        font-size: 24px;
+    }
+
+    .menu-toggle:checked ~ .navbar {
+        right: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .email {
+        display: none;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .home-content, .home-img {
+        width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 30px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .btn-box {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about, .education {
+        padding: 60px 5%;
+        gap: 3em;
+    }
+
+    .about-content h2, .education-content h1 {
+        font-size: 32px;
+    }
+
+    .about-content h3, .education-content h3 {
+        font-size: 48px;
+    }
+
+    .about-content p, .education-content p {
+        font-size: 16px;
+    }
+
+    .experience {
+        padding: 60px 5%;
+    }
+
+    .experience-content h1 {
+        font-size: 48px;
+    }
+
+    .experience-content h3 {
+        font-size: 32px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-1, .btn-2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about-content h3, .education-content h3 {
+        font-size: 36px;
+    }
+
+    .experience-content h1 {
+        font-size: 36px;
+    }
+
+    .experience-content h3 {
+        font-size: 28px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+    }
+
+    .footer ul li {
+        margin: 10px 0;
+    }
+}
+
