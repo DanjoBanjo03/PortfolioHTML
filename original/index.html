@@ -17,7 +17,7 @@
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
         </nav>
-        <div class="menu-toggle">☰</div>
+
         <a href="mailto:bajenovdaniel@gmail.com" class="email">Email Me</a>
     </header>
 
@@ -25,7 +25,7 @@
         <div class="home-content">
             <h3>Hi</h3>
 
-            <h1>I'm <span>Daniel</span> Bajenov<br> a Software Development Student</h1>
+            <h1>I'm <span>Daniel</span> Bajenov<br> a Software Development student</h1>
 
             <div class="introduction">
                 <p>Welcome to my portfolio, take a look at <a href="#about-content">about me</a>, my <a href="#experience">
@@ -172,30 +172,5 @@
         <p class="copyright">&copy; 2024 Daniel Bajenov | All Rights Reserved</p>
     </footer>
     <script defer src="/_vercel/speed-insights/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navbar = document.querySelector('.navbar');
-    
-            menuToggle.addEventListener('click', function() {
-                navbar.classList.toggle('active');
-            });
-    
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                const isClickInside = navbar.contains(event.target) || menuToggle.contains(event.target);
-                if (!isClickInside && navbar.classList.contains('active')) {
-                    navbar.classList.remove('active');
-                }
-            });
-    
-            // Close menu when clicking on a link
-            navbar.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navbar.classList.remove('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
