@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
-from models import db, JobApplication
-from forms import JobForm
+from projects.job_tracker.models import db, JobApplication
+from projects.job_tracker.forms import JobForm
 from datetime import date
 import os
 
