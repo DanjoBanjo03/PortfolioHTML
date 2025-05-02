@@ -1,8 +1,14 @@
-import sys, os
+import sys
+import os
 from flask import Flask
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from projects.job_tracker.app import app as tracker_app
 
-# Expose the Flask app directly for Vercel
-app = tracker_app
+
+# Mount the tracker app under /api, stripping the prefix before dispatch
+root_app = Flask("root_app")
+app = DispatcherMiddleware(root_app, {
+    '/api': tracker_app
+})
