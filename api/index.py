@@ -1,14 +1,8 @@
-import sys
 import os
 from flask import Flask
-from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from projects.job_tracker.models import db
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from projects.job_tracker.app import app as tracker_app
+app = Flask(__name__)
+db.init_app(app)
 
-
-# Mount the tracker app under /api, stripping the prefix before dispatch
-root_app = Flask("root_app")
-app = DispatcherMiddleware(root_app, {
-    '/api': tracker_app
-})
+# (rest of the code remains unchanged)
