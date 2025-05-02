@@ -1,8 +1,18 @@
+import sys
 import os
 from flask import Flask
-from projects.job_tracker.models import db
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
-app = Flask(__name__)
-db.init_app(app)
+# Ensure the repo root is on the Python path
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-# (rest of the code remains unchanged)
+# Import the configured Flask app from your tracker project
+from projects.job_tracker.app import app as tracker_app
+
+# Create a root app to mount under
+root_app = Flask("root_app")
+
+# Mount the tracker app under "/api", stripping that prefix before dispatch
+app = DispatcherMiddleware(root_app, {
+    '/api': tracker_app
+})
