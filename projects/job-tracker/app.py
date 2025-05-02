@@ -5,10 +5,8 @@ from forms import JobForm
 from datetime import date
 import os
 
-URL = 'postgresql://postgres:[YOUR-PASSWORD]@db.enndqhlolcspqeaocpou.supabase.co:5432/postgres'
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(URL)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-key')
 db = SQLAlchemy(app)
 
