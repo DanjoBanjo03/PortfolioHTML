@@ -10,9 +10,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-key')
 db = SQLAlchemy(app)
 
-with app.app_context():
-    db.create_all()
-
 @app.route('/')
 def index():
     q = request.args.get('q','')
