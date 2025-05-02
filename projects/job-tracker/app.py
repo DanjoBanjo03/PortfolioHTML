@@ -1,12 +1,16 @@
 from flask import Flask, render_template, redirect, url_for, request
+from flask_sqlalchemy import SQLAlchemy
 from models import db, JobApplication
 from forms import JobForm
 from datetime import date
+import os
+
+URL = 'postgresql://postgres:[YOUR-PASSWORD]@db.enndqhlolcspqeaocpou.supabase.co:5432/postgres'
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jobs.db'
-app.config['SECRET_KEY'] = 'change-me'
-db.init_app(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(URL)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-key')
+db = SQLAlchemy(app)
 
 with app.app_context():
     db.create_all()
