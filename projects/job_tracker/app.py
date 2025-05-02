@@ -1,15 +1,14 @@
 from flask import Flask, render_template, redirect, url_for, request
-from models import db, JobApplication
-from forms import JobForm
+from flask_sqlalchemy import SQLAlchemy
+from projects.job_tracker.models import db, JobApplication
+from projects.job_tracker.forms import JobForm
 from datetime import date
+import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jobs.db'
-app.config['SECRET_KEY'] = 'change-me'
-db.init_app(app)
-
-with app.app_context():
-    db.create_all()
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-key')
+db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
