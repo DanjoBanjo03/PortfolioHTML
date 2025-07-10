@@ -147,6 +147,9 @@
                     <ul>Operating Systems (Linux)</ul>
                     <ul>Mobile Web-Based Applications</ul>
                     <ul>Ai and Machine Learning - Python</ul>
+                    <ul>.NET with C#</ul>
+                    <ul>Data Structure with C</ul>
+                    <ul>IT Project Management</ul>
                 </li>
         </div>
 
@@ -182,7 +185,6 @@
                 navbar.classList.toggle('active');
             });
     
-            // Close menu when clicking outside
             document.addEventListener('click', function(event) {
                 const isClickInside = navbar.contains(event.target) || menuToggle.contains(event.target);
                 if (!isClickInside && navbar.classList.contains('active')) {
@@ -190,7 +192,6 @@
                 }
             });
     
-            // Close menu when clicking on a link
             navbar.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     navbar.classList.remove('active');

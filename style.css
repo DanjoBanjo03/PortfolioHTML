@@ -17,36 +17,37 @@ body {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 5% 20px 50px;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 5% 15px 40px;
+    background: rgba(220, 224, 219, 0.95);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    padding-right: 50px;
+    padding-right: 40px;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.2);
 }
 
 .logo {
-    font-size: 40px;
-    color: white;
+    font-size: 30px;
+    color: #374151;
     font-weight: 600;
     transition: 0.3s ease;
     font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 .logo:hover {
-    color: #1abc9c;
-    text-shadow: 0 0 25px #1abc9c, 0 0 50px #1abc9c;
-    transform: scale(1.1);
+    color: #f59e0b;
+    text-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+    transform: scale(1.05);
 }
 
 span {
-    color: #1abc9c;
+    color: #f59e0b;
 }
 
 .menu-toggle {
@@ -56,7 +57,7 @@ span {
     transform: translateY(-50%);
     display: none;
     font-size: 24px;
-    color: white;
+    color: #374151;
     cursor: pointer;
 }
 
@@ -68,23 +69,26 @@ span {
     right: 0;
     left: auto;
     width: 200px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(220, 224, 219, 0.95);
     padding: 20px 0;
+    border: 1px solid rgba(55, 65, 81, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(55, 65, 81, 0.15);
 }
 
 .navbar a {
-    font-size: 18px;
-    color: white;
+    font-size: 14px;
+    color: #374151;
     font-weight: 500;
-    margin: 0 20px;
-    border-bottom: 3px solid transparent;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent;
     transition: 0.3s ease;
     }
 
 .navbar a:hover,
 .navbar a:active {
-    color: #1abc9c;
-    border-bottom: 3px solid #1abc9c;
+    color: #f59e0b;
+    border-bottom: 2px solid #f59e0b;
 }
 
 .navbar.active a {
@@ -92,21 +96,22 @@ span {
 }
 
 .email {
-    padding: 10px 28px;
-    background-color: white;
-    color: black;
+    padding: 8px 20px;
+    background-color: #f59e0b;
+    color: white;
     border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 12px;
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
 .email:hover {
-    background-color: #1abc9c;
-    box-shadow: 0 0 25px #1abc9c;
+    background-color: #d97706;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
     color: white;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 767px) {
@@ -126,8 +131,11 @@ span {
         top: 100%;
         right: 0;
         width: 200px;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(220, 224, 219, 0.95);
         padding: 20px;
+        border: 1px solid rgba(55, 65, 81, 0.2);
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(55, 65, 81, 0.15);
     }
 
     .navbar.active a,
@@ -139,21 +147,23 @@ span {
 
     .email {
         background-color: transparent;
-        color: white;
+        color: #374151;
         padding: 0;
     }
 
     .email:hover {
         background-color: transparent;
         box-shadow: none;
+        color: #f59e0b;
+        transform: none;
     }
 }
   
 .home {
     width: 100%;
     min-height: 100vh;
-    background: rgb(255, 255, 255);
-    color: black;
+    background: #eaece9;
+    color: #374151;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,16 +190,17 @@ span {
 }
 
 .introduction {
-    color: black;
+    color: #374151;
 }
 
 .introduction a {
-    color: #1abc9c;
+    color: #f59e0b;
+    font-weight: 500;
 }
 
 .introduction a:hover {
-    color: black;
-    text-shadow: 0 0 25px #1abc9c, 0 0 50px #1abc9c;
+    color: #d97706;
+    text-decoration: underline;
 }
 
 .home-img img {
@@ -198,8 +209,10 @@ span {
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    box-shadow: 0 0 25px #1abc9c, 0 0 50px #1abc9c;
+    box-shadow: 0 10px 30px rgba(55, 65, 81, 0.2);
     margin-top: 20px;
+    border-radius: 15px;
+    border: 3px solid #f59e0b;
 }
 
 .btn-box {
@@ -213,9 +226,9 @@ span {
 .btn-1,
 .btn-2 {
     padding: 15px 28px;
-    background-color: #333333;
-    color: white;
-    border: 2px solid transparent;
+    background-color: white;
+    color: #374151;
+    border: 2px solid #374151;
     border-radius: 8px;
     font-size: 18px;
     letter-spacing: 1px;
@@ -227,19 +240,24 @@ span {
 }
 
 .btn-1:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    background-color: #374151;
+    color: white;
+    border: 2px solid #374151;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(55, 65, 81, 0.3);
 }
 
 .btn-2 {
-    background-color: #1abc9c;
-    border: 2px solid #333333;
+    background-color: #f59e0b;
+    color: white;
+    border: 2px solid #f59e0b;
 }
 
 .btn-2:hover {
-    background-color: white;
-    color: #1abc9c;
+    background-color: #d97706;
+    border: 2px solid #d97706;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
 }
 
 .about,
@@ -256,13 +274,15 @@ span {
 }
 
 .skill-card {
-    background-color: #f0f0f0;
+    background-color: white;
     padding: 15px;
     border-radius: 8px;
+    border: 1px solid rgba(55, 65, 81, 0.2);
+    box-shadow: 0 4px 12px rgba(55, 65, 81, 0.1);
 }
 
 .footer {
-    background-color: #333;
+    background-color: #374151;
     color: white;
     padding: 20px 5%;
     text-align: center;
@@ -369,13 +389,14 @@ span {
 }
   
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 12px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #1abc9c;
+    background-color: #f59e0b;
+    border-radius: 6px;
 }
 ::-webkit-scrollbar-track{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #e5e7eb;
     width: 50px;
 }
 
@@ -387,21 +408,22 @@ span {
     display: flex;
     padding: 12% 8%;
     gap: 10em;
-    background: black;
+    background: #eaece9;
 }
 
 .about-content h2{
-    color: white;
+    color: #f59e0b;
     font-size: 42px;
 }
 .about-content h3{
     font-size: 62px;
-    color: white;
+    color: #374151;
 }
 .about-content p{
-    color: white;
+    color: #374151;
     font-size: 20px;
     margin: 2em 0 3em;
+    line-height: 1.6;
 }
 
 #experience {
@@ -411,8 +433,8 @@ span {
 .experience {
     width: 100%;
     min-height: 100vh;
-    background: rgb(255, 255, 255);
-    color: black;
+    background: #eaece9;
+    color: #374151;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,38 +469,40 @@ span {
 }
 
 .skill-card {
-    background-color: #f0f0f0;
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(55, 65, 81, 0.2);
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(55, 65, 81, 0.15);
 }
 
 .skill-card i {
     font-size: 48px;
-    color: #1abc9c;
+    color: #f59e0b;
     margin-bottom: 15px;
 }
 
 .skill-card h4 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #374151;
 }
 
 .skill-card p {
     font-size: 18px;
-    color: #666;
+    color: #374151;
     margin-bottom: 10px;
 }
 
 .skill-card .projects {
     display: inline-block;
-    background-color: #1abc9c;
+    background-color: #f59e0b;
     color: white;
     padding: 5px 10px;
     border-radius: 20px;
@@ -501,38 +525,39 @@ span {
     display: flex;
     padding: 12% 8%;
     gap: 10em;
-    background: black;
+    background: #eaece9;
 }
 
 .education-content {
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 .education-content h1 {
-    color: white;
+    color: #f59e0b;
     font-size: 42px;
 }
 
 .education-content h3 {
     font-size: 62px;
-    color: white;
+    color: #374151;
 }
 
 .education-content p {
-    color: white;
+    color: #374151;
     font-size: 20px;
     margin: 2em 0 1em;
-    word-wrap: break-word; 
+    word-wrap: break-word;
+    line-height: 1.6;
 }
 
 .education-content a{
-    color: #1abc9c;
+    color: #f59e0b;
+    font-weight: 500;
 }
 
 .education-content a:hover{
-    color: white;
-    text-shadow: 0 0 25px #1abc9c,
-                 0 0 50px #1abc9c;
+    color: #d97706;
+    text-decoration: underline;
 }
 
 .course-list {
@@ -546,18 +571,18 @@ span {
 .course-list ul {
     list-style: none;
     text-align: center;
-    color: white;
+    color: #374151;
     opacity: 1;
-    transition: opacity 0.3s ease, text-shadow 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .course-list:hover ul {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .course-list ul:hover {
     opacity: 1;
-    text-shadow: 0 0 15px #1abc9c, 0 0 25px #1abc9c;
+    color: #f59e0b;
 }
 
 
@@ -608,7 +633,7 @@ span {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: #374151;
 }
 .footer .social{
     text-align: center;
@@ -618,20 +643,20 @@ span {
 .footer .social a{
     font-size: 24px;
     color: white;
-    border: 2px solid #1abc9c;
+    border: 2px solid #f59e0b;
     width: 40px;
     line-height: 38px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
     margin: 0 8px;
-    box-shadow: inset 0 0 10px #1abc9c, 0 0 10px #1abc9c;
     transition: 0.3s ease;
 }
 .footer .social a:hover{
-    transform: scale(1.2)translateY(-10px);
-    color: #1abc9c;
-    border: 2px solid #1abc9c;
+    transform: scale(1.1) translateY(-3px);
+    color: #f59e0b;
+    border: 2px solid #f59e0b;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 .footer ul{
     margin-top: 0;
@@ -644,10 +669,11 @@ span {
 .footer ul li a{
     color: white;
     border-bottom: 3px solid transparent;
-    transition: 0.3s ease;   
+    transition: 0.3s ease;
 }
 .footer ul li a:hover{
-    border-bottom: 3px solid #1abc9c;
+    border-bottom: 3px solid #f59e0b;
+    color: #f59e0b;
 }
 .footer ul li{
     display: inline-block;
@@ -657,7 +683,7 @@ span {
     margin-top: 15px;
     text-align: center;
     font-size: 12px;
-    color: white;
+    color: #d1d5db;
 }
 
 html {
