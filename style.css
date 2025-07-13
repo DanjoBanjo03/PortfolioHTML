@@ -191,6 +191,19 @@ span {
 
 /* Mobile responsive styles for home content */
 @media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        padding: 100px 5% 30px;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        order: 2;
+    }
+
     .home-content h3 {
         font-size: 28px;
     }
@@ -204,21 +217,61 @@ span {
         font-size: 16px;
         margin: 20px 0 25px;
     }
+
+    .home-img {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .home-img img {
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-1, .btn-2 {
+        width: 100%;
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 480px) {
+    .home {
+        padding: 90px 3% 20px;
+    }
+
     .home-content h3 {
         font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .home-content h1 {
         font-size: 28px;
         line-height: 1.4;
+        margin-bottom: 15px;
     }
 
     .home-content p {
         font-size: 14px;
         margin: 15px 0 20px;
+        line-height: 1.5;
+    }
+
+    .home-img img {
+        max-width: 220px;
+    }
+
+    .btn-1, .btn-2 {
+        max-width: 200px;
+        padding: 12px 20px;
+        font-size: 16px;
     }
 }
 
