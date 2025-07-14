@@ -21,14 +21,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 5% 15px 40px;
+    padding: 15px 40px;
     background: rgba(220, 224, 219, 0.95);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    padding-right: 40px;
     border-bottom: 1px solid rgba(55, 65, 81, 0.2);
 }
 
@@ -416,7 +415,7 @@ span {
         margin: 0 15px;
     }
     .header {
-        padding: 25px 8%;
+        padding: 15px 40px;
     }
 
     .navbar {
@@ -429,7 +428,7 @@ span {
     }
 
     .navbar a {
-        margin: 0 20px;
+        margin: 0 15px;
     }
 
     .menu-toggle {
@@ -469,7 +468,7 @@ span {
   
 @media (min-width: 1024px) {
     .header {
-        padding: 35px 12%;
+        padding: 15px 40px;
     }
 
     .home-img img {
